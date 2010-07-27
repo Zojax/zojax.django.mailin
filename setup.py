@@ -3,9 +3,9 @@ import os
 
 version = '0.1dev'
 
-setup(name='zojax.django.forms',
+setup(name='zojax.django.mailin',
       version=version,
-      description="Django forms utils.",
+      description="Django mailin.",
       long_description="",
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
@@ -27,6 +27,7 @@ setup(name='zojax.django.forms',
         ),
       install_requires=[
           'setuptools',
+          'rwproperty'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
