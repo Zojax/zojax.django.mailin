@@ -7,7 +7,7 @@ Aliases:
 
 $Id$
 """
-import sys, urllib, traceback, os.path
+import sys, urllib, traceback, os.path, urlparse
 
 MAXSIZE = 0
 HOSTNAME = u'%(HOSTNAME)s'
@@ -21,7 +21,7 @@ def main(argv):
         else:
             host = HOSTNAME
 
-        url = host+'/mailin/mailinTransport'
+        url = urlparse.urljoin(host, 'mailin/mailinTransport')
 
         print >> file, url
 
