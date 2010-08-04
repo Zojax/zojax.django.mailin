@@ -15,6 +15,6 @@ def loader(request):
 
 def loader_py(request):
     data = open(mailloaderFile, 'rb').read()
-    response = HttpResponse(data%{'HOSTNAME': request.build_absolute_uri('/mailin')})
+    response = HttpResponse(data%{'HOSTNAME': request.build_absolute_uri('/')})
     response['Content-Disposition'] = 'attachment; filename="mailloader.py"'
     return response
