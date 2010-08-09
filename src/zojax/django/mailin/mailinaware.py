@@ -72,8 +72,9 @@ class MailInAwareDestination(object):
         # deliver message
         try:
             self.processRecipient(principal, message)
-        except:
+        except Exception, e:
             log_exc()
+            raise MailInException(e)
 
     def processRecipient(self, principal, message):
         raise NotImplementedError()
