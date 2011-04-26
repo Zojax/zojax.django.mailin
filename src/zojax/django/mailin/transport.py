@@ -36,7 +36,7 @@ class MailInTransport(object):
         try:
             configlet.process(msg)
         except MailInException, msg:
-            log(str(msg))
+            log_exc('Error processing email')
             return HttpResponse('failed on processing', status=500)
 
         return HttpResponse('success')
