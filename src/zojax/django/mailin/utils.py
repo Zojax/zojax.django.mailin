@@ -19,7 +19,7 @@ def log(msg='', subsystem='zojax.django.mailin'):
 
 def log_exc(msg='', subsystem='zojax.django.mailin'):
     log = logging.getLogger(subsystem)
-    log.log(logging.ERROR, msg, exc_info=sys.exc_info())
+    log.log(logging.ERROR, msg, exc_info=True)
 
 
 def log_error(msg='', subsystem='zojax.django.mailin'):
